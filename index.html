@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Pixel — Воплощаем Цифровые Идеи</title>
+    <meta name="description"
+        content="Golden Pixel — digital-агентство полного цикла. Веб-разработка, мобильные приложения, дизайн, SMM и видеомонтаж. Премиальное качество, современные технологии.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Golden Pixel — Воплощаем Цифровые Идеи">
+    <meta property="og:description"
+        content="Digital-агентство полного цикла. Веб-разработка, мобильные приложения, дизайн, SMM и видеомонтаж.">
+    <meta property="og:url" content="https://goldenpixel.dev/">
+    <meta property="og:site_name" content="Golden Pixel">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:image" content="https://goldenpixel.dev/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Golden Pixel — Воплощаем Цифровые Идеи">
+    <meta name="twitter:description"
+        content="Digital-агентство полного цикла. Веб-разработка, мобильные приложения, дизайн, SMM и видеомонтаж.">
+    <meta name="twitter:image" content="https://goldenpixel.dev/og-image.png">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FFE55C'/%3E%3Cstop offset='50%25' stop-color='%23FFD700'/%3E%3Cstop offset='100%25' stop-color='%23D4AF37'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='50,5 95,50 50,95 5,50' fill='url(%23g)'/%3E%3Cpolygon points='50,30 70,50 50,70 30,50' fill='rgba(10,10,10,0.15)'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Перейти к содержимому</a>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 0; height: 0; overflow: hidden;"
+        aria-hidden="true">
+        <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FFE55C" />
+                <stop offset="50%" style="stop-color:#FFD700" />
+                <stop offset="100%" style="stop-color:#D4AF37" />
+            </linearGradient>
+            <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                </feMerge>
+            </filter>
+        </defs>
+    </svg>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#hero" class="nav-logo">
+                <img src="photo_2025-12-09_22-14-41-removebg-preview.png" alt="Golden Pixel Logo" class="nav-logo-img">
+                GOLDEN PIXEL
+            </a>
+            <div class="nav-links">
+                <a href="#about" data-i18n="navAbout">О нас</a>
+                <a href="#services" data-i18n="navServices">Услуги</a>
+                <a href="#portfolio" data-i18n="navPortfolio">Портфолио</a>
+                <a href="#contacts" data-i18n="navContacts">Контакты</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-switcher-btn active" data-lang="ru" onclick="setLanguage('ru')"
+                    aria-label="Русский">RU</button>
+                <button class="lang-switcher-btn" data-lang="uzb" onclick="setLanguage('uzb')"
+                    aria-label="O'zbek">UZB</button>
+                <button class="lang-switcher-btn" data-lang="en" onclick="setLanguage('en')"
+                    aria-label="English">EN</button>
+            </div>
+            <button class="nav-burger" id="burger" onclick="toggleMenu()" aria-label="Открыть меню"
+                aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" data-i18n="navAbout" onclick="toggleMenu(false)">О нас</a>
+        <a href="#services" data-i18n="navServices" onclick="toggleMenu(false)">Услуги</a>
+        <a href="#portfolio" data-i18n="navPortfolio" onclick="toggleMenu(false)">Портфолио</a>
+        <a href="#contacts" data-i18n="navContacts" onclick="toggleMenu(false)">Контакты</a>
+    </div>
+
+    <main id="main-content">
+        <section class="hero" id="hero">
+            <canvas class="hero-canvas" id="heroCanvas"></canvas>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="photo_2025-12-09_22-14-41-removebg-preview.png" alt="Golden Pixel Large Logo">
+                </div>
+                <h1 data-i18n="heroTitle">Golden Pixel — Воплощаем Цифровые Идеи</h1>
+                <p class="hero-subtitle" data-i18n="heroSubtitle">Разработка • Дизайн • Продвижение</p>
+                <a href="#contacts" class="btn-primary" data-i18n="heroButton">Обсудить проект</a>
+            </div>
+        </section>
+
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 data-i18n="aboutTitle">О нас</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <p class="about-text reveal" data-i18n="aboutText">
+                    Golden Pixel — digital-агентство полного цикла. Мы создаём современные цифровые продукты, которые
+                    помогают бизнесу расти и выделяться. Наша команда объединяет экспертизу в разработке, дизайне и
+                    маркетинге для достижения максимального результата.
+                </p>
+                <div class="advantages-grid">
+                    <div class="advantage-card reveal reveal-delay-1">
+                        <div class="advantage-icon">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path
+                                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="advantage1Title">Полный цикл разработки</h3>
+                        <p data-i18n="advantage1Text">От идеи до запуска — берём на себя весь процесс создания цифрового
+                            продукта</p>
+                    </div>
+                    <div class="advantage-card reveal reveal-delay-2">
+                        <div class="advantage-icon">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="advantage2Title">Индивидуальный подход</h3>
+                        <p data-i18n="advantage2Text">Каждый проект уникален — мы адаптируем решения под ваши задачи и
+                            цели</p>
+                    </div>
+                    <div class="advantage-card reveal reveal-delay-3">
+                        <div class="advantage-icon">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="advantage3Title">Современные технологии</h3>
+                        <p data-i18n="advantage3Text">Используем передовые инструменты и фреймворки для лучшего
+                            результата</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services" id="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 data-i18n="servicesTitle">Наши Услуги</h2>
+                    <p data-i18n="servicesSubtitle">Комплексные digital-решения для вашего бизнеса</p>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card reveal reveal-delay-1">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFD700"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="service1Title">Веб-разработка</h3>
+                        <p data-i18n="service1Text">Создание сайтов любой сложности — от лендингов до масштабных
+                            веб-приложений</p>
+                    </div>
+                    <div class="service-card reveal reveal-delay-2">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFD700"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                <line x1="12" y1="18" x2="12.01" y2="18" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="service2Title">Мобильные приложения</h3>
+                        <p data-i18n="service2Text">Разработка нативных и кроссплатформенных iOS и Android приложений
+                        </p>
+                    </div>
+                    <div class="service-card reveal reveal-delay-3">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFD700"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="service3Title">Десктоп приложения</h3>
+                        <p data-i18n="service3Text">Кроссплатформенные desktop-решения для Windows, macOS и Linux</p>
+                    </div>
+                    <div class="service-card reveal reveal-delay-4">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFD700"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2l10 6.5v7L12 22 2 15.5v-7L12 2z" />
+                                <line x1="12" y1="22" x2="12" y2="15.5" />
+                                <line x1="22" y1="8.5" x2="15.5" y2="12" />
+                                <line x1="2" y1="8.5" x2="8.5" y2="12" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="service4Title">Дизайн</h3>
+                        <p data-i18n="service4Text">Создание уникальных логотипов, баннеров и визуальной айдентики
+                            бренда</p>
+                    </div>
+                    <div class="service-card reveal reveal-delay-7">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFD700"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="23 7 16 12 23 17 23 7" />
+                                <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="service5Title">Видеомонтаж</h3>
+                        <p data-i18n="service5Text">Профессиональный монтаж, цветокоррекция и обработка видеоконтента
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 data-i18n="portfolioTitle">Портфолио</h2>
+                    <p data-i18n="portfolioSubtitle">Наши лучшие проекты и кейсы</p>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <div class="portfolio-item reveal reveal-delay-1" data-category="sites">
+                        <div class="portfolio-placeholder">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                        </div>
+                        <div class="portfolio-item-overlay">
+                            <h4 data-i18n="portfolioItem1">Корпоративный сайт</h4>
+                            <p>Веб-разработка</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal reveal-delay-2" data-category="sites">
+                        <div class="portfolio-placeholder">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                        </div>
+                        <div class="portfolio-item-overlay">
+                            <h4 data-i18n="portfolioItem2">Интернет-магазин</h4>
+                            <p>E-Commerce</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-more reveal reveal-delay-3" style="text-align: center; margin-top: 48px;">
+                    <a href="portfolio.html" class="btn-primary" data-i18n="portfolioButton">Посмотреть полностью</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contacts" id="contacts">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 data-i18n="contactsTitle">Свяжитесь с нами</h2>
+                    <p data-i18n="contactsSubtitle">Готовы обсудить ваш проект? Напишите нам!</p>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="contacts-wrapper">
+                    <div class="contacts-info reveal">
+                        <h3 data-i18n="contactsHeading">Давайте создадим что-то великолепное</h3>
+                        <p data-i18n="contactsText">Мы всегда рады новым проектам и амбициозным идеям. Расскажите нам о
+                            вашей задаче, и мы предложим лучшее решение.</p>
+                        <a href="https://www.instagram.com/goldenpixel.dev?igsh=MXcyejk4MjA0ZHF1ZQ==" target="_blank"
+                            rel="noopener" class="contact-link">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                            <span>@goldenpixel.dev</span>
+                        </a>
+                        <a href="mailto:goldenpixel7@gmail.com" class="contact-link">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <span>goldenpixel7@gmail.com</span>
+                        </a>
+                        <a href="https://t.me/Golden_Pixel_dev" target="_blank" rel="noopener" class="contact-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            <span>@Golden_Pixel_dev</span>
+                        </a>
+                        <a href="tel:+998932113312" class="contact-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>+998 93 211 33 12</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="footer-copy">&copy; <span id="year"></span> Golden Pixel. <span data-i18n="footerCopyright">Все
+                    права защищены.</span></span>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/goldenpixel.dev?igsh=MXcyejk4MjA0ZHF1ZQ==" target="_blank"
+                    rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                    Instagram
+                </a>
+                <a href="https://t.me/Golden_Pixel_dev" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                    Telegram
+                </a>
+                <a href="tel:+998932113312">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    +998 93 211 33 12
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
