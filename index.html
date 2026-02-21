@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Russo+One&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -238,29 +238,34 @@
                 </div>
                 <div class="portfolio-grid" id="portfolio-grid">
                     <div class="portfolio-item reveal reveal-delay-1" data-category="sites">
-                        <div class="portfolio-placeholder">
-                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="16 18 22 12 16 6" />
-                                <polyline points="8 6 2 12 8 18" />
-                            </svg>
+                        <div class="portfolio-images" id="caramel-slider">
+                            <img src="caramel.jpg" alt="Caramel" class="portfolio-img active">
+                            <img src="caramel_menu.jpg" alt="Caramel Menu" class="portfolio-img">
                         </div>
+                        <button class="portfolio-nav prev" onclick="changeSlide(-1)">❮</button>
+                        <button class="portfolio-nav next" onclick="changeSlide(1)">❯</button>
                         <div class="portfolio-item-overlay">
-                            <h4 data-i18n="portfolioItem1">Корпоративный сайт</h4>
+                            <h4>Caramel</h4>
                             <p>Веб-разработка</p>
                         </div>
+                        <a href="https://caramel-uz.vercel.app/" target="_blank" rel="noopener" class="portfolio-link">
+                            Посмотреть сайт →
+                        </a>
                     </div>
                     <div class="portfolio-item reveal reveal-delay-2" data-category="sites">
-                        <div class="portfolio-placeholder">
-                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                                <line x1="8" y1="21" x2="16" y2="21" />
-                                <line x1="12" y1="17" x2="12" y2="21" />
-                            </svg>
+                        <div class="portfolio-images" id="606-slider">
+                            <img src="606.jpg" alt="606 Premium Game Zone" class="portfolio-img active">
+                            <img src="606_menu.jpg" alt="606 Premium Game Zone Menu" class="portfolio-img">
                         </div>
+                        <button class="portfolio-nav prev" onclick="changeSlide606(-1)">❮</button>
+                        <button class="portfolio-nav next" onclick="changeSlide606(1)">❯</button>
                         <div class="portfolio-item-overlay">
-                            <h4 data-i18n="portfolioItem2">Интернет-магазин</h4>
-                            <p>E-Commerce</p>
+                            <h4>606 Premium Game Zone</h4>
+                            <p>Веб-разработка</p>
                         </div>
+                        <a href="https://606gameclub.netlify.app/" target="_blank" rel="noopener" class="portfolio-link">
+                            Посмотреть сайт →
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio-more reveal reveal-delay-3" style="text-align: center; margin-top: 48px;">
