@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Russo+One&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -70,6 +70,28 @@
                 </div>
 
                 <div class="portfolio-grid" id="portfolio-grid" role="tabpanel" aria-labelledby="tab-sites">
+                    <a href="https://caramel-uz.vercel.app/" target="_blank" rel="noopener" class="portfolio-item reveal reveal-delay-1" data-category="sites">
+                        <img src="caramel.jpg" alt="Caramel" class="portfolio-img">
+                        <div class="portfolio-item-overlay">
+                            <h4>Caramel</h4>
+                            <p>Веб-разработка</p>
+                        </div>
+                    </a>
+                    <div class="portfolio-item reveal reveal-delay-1" data-category="sites">
+                        <div class="portfolio-images" id="606-slider">
+                            <img src="606.jpg" alt="606 Premium Game Zone" class="portfolio-img active">
+                            <img src="606_menu.jpg" alt="606 Premium Game Zone Menu" class="portfolio-img">
+                        </div>
+                        <button class="portfolio-nav prev" onclick="changeSlide606(-1)">❮</button>
+                        <button class="portfolio-nav next" onclick="changeSlide606(1)">❯</button>
+                        <div class="portfolio-item-overlay">
+                            <h4>606 Premium Game Zone</h4>
+                            <p>Веб-разработка</p>
+                        </div>
+                        <a href="https://606gameclub.netlify.app/" target="_blank" rel="noopener" class="portfolio-link">
+                            Посмотреть сайт →
+                        </a>
+                    </div>
                     <div class="portfolio-item reveal reveal-delay-1" data-category="sites">
                         <div class="portfolio-placeholder">
                             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -210,6 +232,52 @@
                             <h4 data-i18n="portfolioItem11">Графический дизайн</h4>
                             <p>Graphic Design</p>
                         </div>
+                    </div>
+                    <div class="portfolio-item reveal reveal-delay-4" data-category="design">
+                        <div class="portfolio-images" id="magnum-slider">
+                            <img src="navrouz.jpg" alt="Magnum Poster 1" class="portfolio-img active">
+                            <img src="navrouz_2.jpg" alt="Magnum Poster 2" class="portfolio-img">
+                        </div>
+                        <button class="portfolio-nav prev" onclick="changeSlideMagnum(-1)">❮</button>
+                        <button class="portfolio-nav next" onclick="changeSlideMagnum(1)">❯</button>
+                        <div class="portfolio-item-overlay">
+                            <h4>Magnum</h4>
+                            <p>Дизайн постеров</p>
+                        </div>
+                        <a href="#" onclick="openMagnumGallery(); return false;" class="portfolio-link">
+                            Смотреть подробно →
+                        </a>
+                    </div>
+                    <div class="portfolio-item reveal reveal-delay-4" data-category="design">
+                        <div class="portfolio-images" id="rosemary-slider">
+                            <img src="rosemary_1.jpg" alt="Rosemary Restaurant 1" class="portfolio-img active">
+                            <img src="rosemary.jpg" alt="Rosemary Restaurant 2" class="portfolio-img">
+                        </div>
+                        <button class="portfolio-nav prev" onclick="changeSlideRosemary(-1)">❮</button>
+                        <button class="portfolio-nav next" onclick="changeSlideRosemary(1)">❯</button>
+                        <div class="portfolio-item-overlay">
+                            <h4>Rosemary</h4>
+                            <p>Ресторан</p>
+                        </div>
+                        <a href="#" onclick="openRosemaryGallery(); return false;" class="portfolio-link">
+                            Смотреть подробно →
+                        </a>
+                    </div>
+                    <div class="portfolio-item reveal reveal-delay-4" data-category="design">
+                        <div class="portfolio-images" id="alumin-slider">
+                            <img src="alumin.jpg" alt="Xinjiang Xingu Aluminum 1" class="portfolio-img active">
+                            <img src="alumin_2.jpg" alt="Xinjiang Xingu Aluminum 2" class="portfolio-img">
+                            <img src="alumin_3.jpg" alt="Xinjiang Xingu Aluminum 3" class="portfolio-img">
+                        </div>
+                        <button class="portfolio-nav prev" onclick="changeSlideAlumin(-1)">❮</button>
+                        <button class="portfolio-nav next" onclick="changeSlideAlumin(1)">❯</button>
+                        <div class="portfolio-item-overlay">
+                            <h4>Xinjiang Xingu Aluminum</h4>
+                            <p>Дизайн</p>
+                        </div>
+                        <a href="#" onclick="openAluminGallery(); return false;" class="portfolio-link">
+                            Смотреть подробно →
+                        </a>
                     </div>
                     <div class="portfolio-item reveal reveal-delay-4" data-category="design">
                         <div class="portfolio-placeholder">
